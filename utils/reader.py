@@ -1,3 +1,6 @@
+import math  # Make sure this is at the top of your file
+
+
 def read_input(file_path):
     try:
         # Open the input file in read mode
@@ -12,9 +15,15 @@ def read_input(file_path):
             distances = []
 
             # Read the next 'n' lines to build the distance matrix
-            for _ in range(n):
+            for i in range(n):
                 # Read and convert each line to a list of floats (distances)
                 row = list(map(float, file.readline().strip().split()))
+
+                # Replace 0 with math.inf for non-diagonal elements
+                for j in range(n):
+                    if i != j and row[j] == 0:
+                        row[j] = math.inf
+
                 distances.append(row)  # Append each row to the distance matrix
 
         # Return the list of city names and the distance matrix

@@ -4,7 +4,7 @@ from algorithms.rbfs import run_rbfs
 
 
 def main():
-    file_path = 'input.txt'
+    file_path = 'inputs/input-3.txt'
     cities, distances = read_input(file_path)
 
     print("Running A*...")
