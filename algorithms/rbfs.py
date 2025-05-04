@@ -1,6 +1,6 @@
 import math
-from models.node import Node              # Importing the Node class used to represent each state
-from algorithms.heuristics import heuristic  # Importing the heuristic function used in RBFS
+from models.node import Node
+from algorithms.heuristics import heuristic
 
 
 def rbfs(node, cities, distances, f_limit):
@@ -61,7 +61,7 @@ def rbfs(node, cities, distances, f_limit):
     return None, math.inf, math.inf
 
 
-def run_rbfs(cities, distances):
+def rbfs_algorithm(cities, distances):
     """
     Initializes and runs the RBFS algorithm from the starting city.
     :param cities: List of city names

@@ -4,7 +4,7 @@ from models.node import Node
 from algorithms.heuristics import heuristic
 
 
-def a_star(cities, distances):
+def a_star_algorithm(cities, distances):
     """
     Implements the A* search algorithm to solve the Traveling Salesman Problem (TSP).
 

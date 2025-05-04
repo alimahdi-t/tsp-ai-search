@@ -1,4 +1,4 @@
-import math  # Make sure this is at the top of your file
+import math
 
 
 def read_input(file_path):
@@ -19,7 +19,7 @@ def read_input(file_path):
                 # Read and convert each line to a list of floats (distances)
                 row = list(map(float, file.readline().strip().split()))
 
-                # Replace 0 with math.inf for non-diagonal elements
+                # Replace 0 with math.inf
                 for j in range(n):
                     if i != j and row[j] == 0:
                         row[j] = math.inf
@@ -29,7 +29,7 @@ def read_input(file_path):
         # Return the list of city names and the distance matrix
         return cities, distances
 
+        # Handle any error that occurs during reading the file and Return empty lists
     except Exception as e:
-        # Handle any error that occurs during file reading or parsing
         print(f"An error occurred while reading the file: {e}")
-        return [], []  # Return empty lists if an error occurs
+        return [], []

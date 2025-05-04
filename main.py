@@ -1,22 +1,18 @@
 from utils.reader import read_input
-from algorithms.astar import a_star
-from algorithms.rbfs import run_rbfs
+from algorithms.astar import a_star_algorithm
+from algorithms.rbfs import rbfs_algorithm
 
 
-def main():
-    file_path = 'inputs/input-3.txt'
-    cities, distances = read_input(file_path)
+file_path = 'inputs/input-3.txt'
+cities, distances = read_input(file_path)
 
-    print("Running A*...")
-    path_a_star, cost_a_star = a_star(cities, distances)
-    print("Path:", [cities[i] for i in path_a_star])
-    print("Cost:", cost_a_star)
+print("A* algorithm:")
+path_a_star, cost_a_star = a_star_algorithm(cities, distances)
+print("Best path:", " -> ".join([cities[i] for i in path_a_star]))
+print("Path cost:", cost_a_star)
 
-    print("\nRunning RBFS...")
-    path_rbfs, cost_rbfs = run_rbfs(cities, distances)
-    print("Path:", [cities[i] for i in path_rbfs])
-    print("Cost:", cost_rbfs)
+print("\n\n\nRBFS algorithm:")
+path_rbfs, cost_rbfs = rbfs_algorithm(cities, distances)
+print("Best path:", " -> ".join([cities[i] for i in path_rbfs]))
+print("Path cost:", cost_rbfs)
 
-
-if __name__ == "__main__":
-    main()
