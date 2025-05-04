@@ -7,9 +7,8 @@ from algorithms.heuristics import heuristic
 def a_star_algorithm(cities, distances):
     """
     Implements the A* search algorithm to solve the Traveling Salesman Problem (TSP).
-
-    :param cities: List of city names (only used for length here)
-    :param distances: 2D list representing the distance matrix between cities
+    :param cities
+    :param distances:the distance matrix between cities
     :return: A tuple (optimal_path, total_cost)
     """
     n = len(cities)
